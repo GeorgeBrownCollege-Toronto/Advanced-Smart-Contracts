@@ -138,14 +138,14 @@ INFO [03-21|00:01:43.630] IPC endpoint opened                      url=/Users/dh
 
 - run `admin` and watch the output
 
-- To create a new account run `personal.newAccounts()`. Provide the password when prompted
+- To create a new account run `personal.newAccount()`. Provide the password when prompted
 > Check chaindata/keystore directory in the file explorer to see the account file.
 
 - Get the list of accounts : run `eth.accounts`
 
 ### mining
 
-- set coinbase account : `miner.etherbase(eth.accounts[0])`
+- set coinbase account : `miner.setEtherbase(eth.accounts[0])`
 > This is where all the ethers rewarded during mining will be credited
 
 - to start mining : `miner.start(1)`

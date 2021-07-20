@@ -27,7 +27,7 @@
 					<textarea data-template>
 						### BCDV 1013 - Advanced Smart Contract 
 						#### Smart contract developer tools
-						<div class="author">Dhruvin Parikh, March 2021</div>
+						<div class="author">Dhruvin Parikh, July 2021</div>
 					</textarea>
 				</section>
 			<section data-markdown><textarea data-template>
@@ -78,6 +78,32 @@
 					<li>Specifications: <a href="https://www.jsonrpc.org/specification" target="_blank">https://www.jsonrpc.org/specification</a></li>
 				</ul>
 				</section>
+
+				<section data-markdown><textarea data-template>
+					### JSON-RPC
+					* A middle-ware like web3.js is used to take advantage of RPC calls.
+					* JSON is a light weight data format that is easy to parse.
+					* JSON-RPC is a stateless, light client RPC
+					 * Surrounded around data structure and rules of processing
+					 * It is transport agnostic (HTTP,websockets,IPC,graphql)  
+				</textarea></section>
+
+				<section data-markdown><textarea data-template>
+					### Why JSON-RPC and Not REST?
+					* When used with HTTP, pretty much the same beyond semantics
+					* JSON-RPC vs JSON + REST
+					 * JSON-RPC is better for performance, data is serialized over the network
+					 * REST data is serialized via the endpoints, can have poor performance with larger JSON files (negligible depending on use case)  
+				</textarea></section>
+
+				<section data-markdown><textarea data-template>
+					### Serialization
+					*The process of translating data structures or object
+					state into a format that can be stored (for example, in a file or
+					memory buffer) or transmitted (for example, across a network
+					connection link) and reconstructed later (possibly in a different
+					computer environment).*  
+				</textarea></section>
 
 				<section data-markdown><textarea data-template>
 					### JSON-RPC call via `curl`
@@ -288,9 +314,31 @@
 				* Follow the instruction in the <a href="https://github.com/GeorgeBrownCollege-Toronto/Advanced-Smart-Contracts/blob/master/notes/sc-dev-tools/exercise/README.md" target="_blank">readme</a> 
 				</textarea></section>
 
-				<section>
-					<h2>Ethereum API libraries</h2>
-				</section>
+				<section data-markdown><textarea data-template>
+					### Ethereum API libraries
+					* Entry point to Ethereum blockchain from client side of the dapp
+					* Communicates to nodes on network using RPC
+					* Ethereum API libraries implementation
+					 * web3.js, [web3.py](https://web3py.readthedocs.io/en/latest/), ethers, [rust-web3](https://github.com/tomusdrw/rust-web3), [hs-web3](https://github.com/airalab/hs-web3) 
+				</textarea></section>
+
+				<section data-markdown><textarea data-template>
+					### Interacting with contracts
+					* **ABI** determines the way functions are called and in the binary
+					format in which information should be passed from one program component to the next
+					* ABI is required to ensure datatype of data passed and returned
+					* Not part of the core Ethereum protocol, you can define your own
+					ABI - but easier to comply with format provided by web3.js 
+				</textarea></section>
+
+				<section data-markdown><textarea data-template>
+					### API and ABI
+					* API = Application Programming Interface
+					* ABI = Application Binary Interface
+					* Contract code is stored as bytecode in binary form on the blockchain under a specific address
+					* You can access the binary data in the contract through the ABI
+					* The ABI defines the structures and methods that you will use to interact with binary contract (just like an API) 
+				</textarea></section>
 
 
 				<section>
@@ -700,7 +748,7 @@
 				</textarea></section>
 
 				<section>
-					<h3>References</h3>
+					<h3>References (1/2)</h3>
 					<ul>
 						<li><a href="https://consensys.net/developers" target="_blank">https://consensys.net/developers</a></li>
 						<li><a href="https://web3js.readthedocs.io/en/latest/" target="_blank">https://web3js.readthedocs.io/en/latest/</a></li>
@@ -710,6 +758,13 @@
 						<li><a href="https://docs.ethers.io/v5/" target="_blank">https://docs.ethers.io/v5/</a></li>
 					</ul>
 				</section>
+
+				<section data-markdown><textarea data-template>
+				### References (2/2)
+				* [Go Ethereum](https://geth.ethereum.org/)
+				* [list of EVM networks](https://chainlist.org/)
+					
+				</textarea></section>
 
 				<section data-markdown><textarea data-template>
 
