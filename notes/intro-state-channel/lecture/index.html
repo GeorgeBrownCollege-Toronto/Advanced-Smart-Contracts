@@ -32,13 +32,23 @@
 					<textarea data-template>
 						### BCDV 1013 - Advanced Smart Contract 
 						#### Introduction to state channel
-						<div class="author">Dhruvin Parikh, March 2021</div>
+						<div class="author">Dhruvin Parikh, July 2021</div>
 					</textarea>
 				</section>
 				<section data-markdown><textarea data-template>
           ### Topics
-          - State Channel
-          - Signing and verifying messages on Ethereum
+          * Scaling overview
+          * Signing and verifying messages on Ethereum
+          * State Channel
+        </textarea></section>
+
+        <section data-markdown><textarea data-template>
+          ### Scaling solutions
+          * Layer 2 Rollups
+          * State channels
+          * Sidechains
+          * Plasma
+          * Validium
         </textarea></section>
 
         <section>
@@ -91,6 +101,7 @@
               </li>
           </ul>
         </section>
+
 
         <section data-markdown><textarea data-template>
           ### State Channel
@@ -276,6 +287,11 @@ returns(address)
             * Ethereum: <a href="https://bravenewcoin.com/insights/vitalik-ethereum-en-route-to-a-million-transactions-per-second" target="_blank">15</a> tps
             * Visa: <a href="https://www.visa.com/blogarchives/us/2013/10/10/stress-test-prepares-visanet-for-the-most-wonderful-time-of-the-year/index.html" target="_blank">47,000</a> transactions per second (tps)
           </textarea></section>
+
+          <section data-markdown><textarea data-template>
+            ### Exercise
+            * Follow the [Readme](https://github.com/GeorgeBrownCollege-Toronto/Advanced-Smart-Contracts/blob/master/notes/intro-state-channel/exercise/rarible-app/README.md) to start using IPFS order book NFT exchange based on Rarible protocol.
+            </textarea></section>
         
 
         <section data-markdown><textarea data-template>
@@ -338,11 +354,39 @@ returns(address)
           <h3>Lab</h3>
             <h4>Follow the instructions on the <a href="https://github.com/GeorgeBrownCollege-Toronto/Advanced-Smart-Contracts/tree/master/notes/intro-state-channel/lab/long-lived-payment-channel#readme" target="_blank">readme</a> file of long-lived-payment-channel</h4>
         </section>
+
+        <section data-markdown><textarea data-template>
+
+          ### State channel implementation
+          * [Connext](https://connext.network/)
+          * [Kchannels](https://www.kchannels.io/)
+          * [Perun](https://perun.network/)
+          * [Raiden](https://raiden.network/)
+          * [Statechannels.org](https://statechannels.org/)         
+
+        </textarea></section> 
+
+        <section data-markdown><textarea data-template>
+
+          ### Readings on state channels and payment channels
+          * [EthHub on state channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
+          * [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4)
+          * [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/)
+          * [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/)
+          * [EthHub on payment channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
+
+        </textarea></section> 
         
         <section>
             <h3>References</h3>
             <ul>
-                <li><a href="https://programtheblockchain.com/" target="_blank">Program the blockchain</a></li>
+                <li><a href="https://programtheblockchain.com/posts/2018/02/17/signing-and-verifying-messages-in-ethereum/" target="_blank">Signing and verifying messages in Ethereum</a></li>
+                <li><a href="https://programtheblockchain.com/posts/2018/02/23/writing-a-simple-payment-channel/" target="_blank">Simple payment channel</a></li>
+                <li><a href="https://programtheblockchain.com/posts/2018/03/02/building-long-lived-payment-channels/" target="_blank">Long lived payment channel</a></li>
+                <li><a href="https://yos.io/2018/11/16/ethereum-signatures/" target="_blank">Signing and Verifying Ethereum Signatures</a></li>
+                <li><a href="https://ethereum.org/en/developers/docs/scaling/" target="_blank">Scaling</a></li>
+                <li><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/cryptography/ECDSA.sol" target="_blank">Openzeppelin's ECDSA</a></li>
+                <li><a href="https://github.com/austintgriffith/scaffold-eth/tree/rarible-starter-app" target="_blank">NFT order book exchange</a></li>
             </ul>
         </section>
         <section data-markdown><textarea data-template>
