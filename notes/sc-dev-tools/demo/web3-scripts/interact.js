@@ -7,7 +7,7 @@ const Web3 = require("web3");
 // Import abi
 const abi = require("./abi.json");
 
-const CONTRACT_ADDRESS="0x88F86Fee7bBf211d513FB657a3bcBc35b0a37160"
+const CONTRACT_ADDRESS="0xc21520908889D0F62cd29627130120Ade63673B8"
 
 // create web3 instance
 const web3 = new Web3(

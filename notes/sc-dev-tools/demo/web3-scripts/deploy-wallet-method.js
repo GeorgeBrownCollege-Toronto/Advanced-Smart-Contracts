@@ -65,3 +65,4 @@ simplestorageContract
 // deployed at 0xA78B7C039DfF2065e5F621e747D59798e16D65a0 on rinkeby
 // deployed another at 0xa6F2d14748Ef0FF530f86E2b174f45503f2a520A on rinkeby 
 // deployed another at 0x88F86Fee7bBf211d513FB657a3bcBc35b0a37160 on rinkeby 
+// deployed another at 0xc21520908889D0F62cd29627130120Ade63673B8 on rinkeby
