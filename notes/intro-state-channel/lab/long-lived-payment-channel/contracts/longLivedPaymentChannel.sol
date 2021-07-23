@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: MIT
-
-pragma solidity ^0.6.9;
+pragma solidity ^0.8.4;
 
 contract LongLivedPaymentChannel {
     address public sender;      // The account sending payments.
@@ -14,7 +13,6 @@ contract LongLivedPaymentChannel {
     uint256 public expiration = 2**256-1;
 
     constructor (address _recipient, uint256 _closeDuration)
-        public
         payable
     {
         sender = msg.sender;
@@ -41,7 +39,7 @@ contract LongLivedPaymentChannel {
         require(isValidSignature(amount, signature),"LongLivedPaymentChannel: signature invalid");
 
         require(amount >= withdrawn, "LongLivedPaymentChannel: amount should be greater than equal to withdrawn");
-        msg.sender.transfer(amount - withdrawn);
+        payable(msg.sender).transfer(amount - withdrawn);
 
         selfdestruct(payable(sender));
     }
@@ -52,14 +50,14 @@ contract LongLivedPaymentChannel {
         require(msg.sender == sender,"LongLivedPaymentChannel: only sender can close the channel");
         emit StartSenderClose();
         // solium-disable-next-line security/no-block-members
-        expiration = now + closeDuration;
+        expiration = block.timestamp + closeDuration;
     }
 
     // If the timeout is reached without the recipient closing the channel, then
     // the ether is released back to the sender.
     function claimTimeout() public {
         // solium-disable-next-line security/no-block-members
-        require(now >= expiration, "LongLivedPaymentChannel: time is not yet expired");
+        require(block.timestamp >= expiration, "LongLivedPaymentChannel: time is not yet expired");
         address payable pSender = payable(sender);
         selfdestruct(pSender);
     }
@@ -78,7 +76,7 @@ contract LongLivedPaymentChannel {
         uint256 amountToWithdraw = amountAuthorized - withdrawn;
 
         withdrawn += amountToWithdraw;
-        msg.sender.transfer(amountToWithdraw);
+        payable(msg.sender).transfer(amountToWithdraw);
     }
 
     function splitSignature(bytes memory sig)

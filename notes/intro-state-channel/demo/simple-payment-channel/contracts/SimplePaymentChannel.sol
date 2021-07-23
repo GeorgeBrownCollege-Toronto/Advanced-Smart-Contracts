@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.4;
 
 contract SimplePaymentChannel {
 
@@ -8,11 +8,11 @@ contract SimplePaymentChannel {
     address public recipient;
     uint256 public expiration;
 
-    constructor(address _recipient,uint256 _duration) public payable {
+    constructor(address _recipient,uint256 _duration) payable {
         sender = msg.sender;
         recipient = _recipient;
         // solium-disable-next-line security/no-block-members
-        expiration = now + _duration;
+        expiration = block.timestamp + _duration;
     }
 
     function isValidSignature(uint256 amount, bytes memory signature) internal view returns(bool) {
@@ -30,13 +30,13 @@ contract SimplePaymentChannel {
         require(msg.sender == recipient, "SimplePaymentChannel: only recipient can close the channel");
         require(isValidSignature(amount, signature), "SimplePaymentChannel: signature is invalid");
 
-        msg.sender.transfer(amount);
+        payable(msg.sender).transfer(amount);
         selfdestruct(payable(sender));
     }
 
     function claimTimeout() public {
                 // solium-disable-next-line security/no-block-members
-        require(now > expiration,"SimplePaymentChannel: the channel has not expired");
+        require(block.timestamp > expiration,"SimplePaymentChannel: the channel has not expired");
         selfdestruct(payable(sender));
     }
 

@@ -344,7 +344,7 @@ returns(address)
           - Bob cannot receive fund after channel closure
           ```js
           function claimTimeout() public {
-            require(now >= expiration);
+            require(block.timestamp >= expiration);
             selfdestruct(sender);
           }
           ```

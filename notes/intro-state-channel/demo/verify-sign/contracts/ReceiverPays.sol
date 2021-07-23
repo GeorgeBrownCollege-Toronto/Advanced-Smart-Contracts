@@ -1,6 +1,6 @@
 // SPDX-License_identifier: MIT
 
-pragma solidity >0.4.0 <0.7.0;
+pragma solidity ^0.8.4;
 
 contract ReceiverPays {
     address public owner = msg.sender;
@@ -8,7 +8,7 @@ contract ReceiverPays {
     mapping(uint256 => bool) usedNonces;
 
     // Funds are sent at deployment time.
-    constructor() public payable { }
+    constructor() payable { }
 
 
     function claimPayment(uint256 amount, uint256 nonce, bytes memory sig) public {
@@ -20,13 +20,13 @@ contract ReceiverPays {
 
         require(recoverSigner(message, sig) == owner,"ReceiverPays: not verified");
 
-        msg.sender.transfer(amount);
+        payable(msg.sender).transfer(amount);
     }
 
     // Destroy contract and reclaim leftover funds.
     function kill() public {
         require(msg.sender == owner, "ReceiverPays: owner can get the funds");
-        selfdestruct(msg.sender);
+        selfdestruct(payable(msg.sender));
     }
 
 
