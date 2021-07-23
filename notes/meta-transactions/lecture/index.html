@@ -32,7 +32,7 @@
 					<textarea data-template>
 						### BCDV 1013 - Advanced Smart Contract 
 						#### Meta transactions
-						<div class="author">Dhruvin Parikh, July 2020</div>
+						<div class="author">Dhruvin Parikh, July 2021</div>
 					</textarea>
 				</section>
 				<section data-markdown><textarea data-template>
@@ -42,14 +42,6 @@
           - demo
           - Building on GSN
         </textarea></section>
-
-        <section>
-          <h3>Getting started</h3>
-          <ul style="list-style: none;">
-            <li><code>$ npm i -g @openzeppelin/cli@next ganache-cli</code></li>
-            <li><code>$ oz unpack gsn</code></li>
-          </ul>
-        </section>
 
         <section>
             <h2>Introduction to meta transactions</h2>
@@ -155,7 +147,7 @@
 
         <section>
           <h3>DEMO</h3>
-          <p><a href="https://github.com/GeorgeBrownCollege-Toronto/Advanced-Smart-Contracts/tree/master/notes/meta-transactions/demo/gsn-counter-dapp#readme" target="_blank">Counter DApp</a></p>
+          <p><a href="https://github.com/GeorgeBrownCollege-Toronto/Advanced-Smart-Contracts/tree/master/notes/meta-transactions/demo/metacoin#readme" target="_blank">Metacoin DApp</a></p>
         </section>
 
         <section>
@@ -230,62 +222,17 @@
           }          
           ```
         </textarea></section>
-
-        <section data-markdown><textarea data-template>
-          ### Web3 clients
-          Routing transactions via relayers
-        </textarea></section>
-
-        <section data-markdown><textarea data-template>
-          ### Using GSN web3 providers
-          ```js
-          import { GSNProvider } from '@openzeppelin/gsn-provider';
-
-          myContract.setProvider(new GSNProvider(NODE_URL, ...));
-          await myContract.methods.log().send();
-          ```
-        </textarea></section>
-
-        <section data-markdown><textarea data-template>
-          ### Register your dapp
-          Top-up your recipient contract balance
-        </textarea></section>
-
-        <section data-markdown><textarea data-template>
-          ### Manage: fund your recipient contract
-          - `$ npm install @openzeppelin/gsn-helpers`
-          - `$ npx oz-gsn fund-recipient`<br/>
-            `--recipient $ADDRESS`<br/>
-            `--ethereumNodeURL $NODE_URL`<br/>
-            `--amount 1000000000000000000`
-        </textarea></section>
-
-        <section>
-          <h3>Local development</h3>
-          <p>spin up a GSN on your ganache</p>
-        </section>
-
-        <section data-markdown><textarea data-template>
-          ### Development: creating a local GSN
-          - `$ npm install @openzeppelin/gsn-helpers`
-          - `$ npx oz-gsn run-relayer`
-        </textarea></section>
-
-        <section data-markdown><textarea data-template>
-          ### Development: in-process layer
-          ```js
-          import { GSNDevProvider } from '@openzeppelin/gsn-provider';
-
-          myContract.setProvider(new GSNDevProvider(URL, {
-          relayerAccount, ...
-          }));
-          ```
-        </textarea></section>
                 
         <section>
             <h3>References</h3>
             <ul>
                 <li><a href="https://docs.opengsn.org/learn/index.html" target="_blank">open GSN docs</a></li>
+                <li><a href="https://metacoin.opengsn.org/" target="_blank">Metacoin live DApp</a></li>
+                <li><a href="https://docs.openzeppelin.com/learn/sending-gasless-transactions">Sending gasless transactions</a></li>
+                <li><a href="https://docs.openzeppelin.com/defender/" >Openzeppelin Defender</a></li>
+                <li><a href="https://docs.openzeppelin.com/defender/" >Openzeppelin Defender</a></li>
+                <li><a href="https://blog.openzeppelin.com/gasless-metatransactions-with-openzeppelin-defender/">Gasless tx with Open zeppelin defender</a></li>
+                <li><a href="https://opengsn.org/">Open GSN</a></li>
             </ul>
         </section>
         <section data-markdown><textarea data-template>

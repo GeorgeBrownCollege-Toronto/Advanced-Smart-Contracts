@@ -1,6 +1,6 @@
 /* global web3 */
 // put your metamask address here, so it will always have some ether on local network...
-const myMetamaskAddr = '0x72c413575D8e2223757068B687c906cc46DA0Af0'
+const myMetamaskAddr = '0xDa1d30af457b8386083C66c9Df7A86269bEbFDF8'
 
 module.exports = async function (deployer, network) {
   if (network === 'development') {

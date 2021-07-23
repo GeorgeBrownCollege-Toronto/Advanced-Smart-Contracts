@@ -1,5 +1,6 @@
 # GSN-DAPP
 Building a DAPP for sending meta transaction (gas less transaction)
+>This demo is now deprecated, as it uses GSNv1, which is no longer supported. Consider using [Defender](https://docs.openzeppelin.com/defender/) for setting up your own [meta-transaction relayers](https://blog.openzeppelin.com/gasless-metatransactions-with-openzeppelin-defender/) instead, or using [GSNv2](https://opengsn.org/) from the OpenGSN team for a decentralized solution.
 
 ## Steps
 
@@ -43,7 +44,9 @@ All contracts have been deployed
 
 #### Tutorial
 [https://docs.openzeppelin.com/learn/sending-gasless-transactions](https://docs.openzeppelin.com/learn/sending-gasless-transactions)
-0xd216153c06e857cd7f72665e0af1d7d82172f494
+
+##### scratch pad
+>0xd216153c06e857cd7f72665e0af1d7d82172f494
 0xC1a1Ae36bFb9e1D4Ca7FF4385385f5C1E71dc672
 address=0xD216153c06E857cD7f72665E0aF1d7D82172F494
 relayServer = "0x0A8aD509DC306e328D9581d84553342f18fB5601"
