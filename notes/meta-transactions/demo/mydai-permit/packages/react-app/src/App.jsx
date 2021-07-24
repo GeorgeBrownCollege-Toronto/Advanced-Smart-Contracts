@@ -237,10 +237,11 @@ function App(props) {
               console.log(writeContracts)
 
               const tokenAddress = writeContracts.TestDai.address
-              const ownerAddress = "0xCeea82AA4e740e3820A3f69301AF9afA31D06728"
+              const ownerAddress = "0xDa1d30af457b8386083C66c9Df7A86269bEbFDF8"
               const spender = writeContracts.YourContract.address
               const result = await signDaiPermit(window.ethereum, tokenAddress, ownerAddress, spender);
-              console.log("result", result)
+              console.log("result", result)  
+              
               // await contracts.TestDai.permit(ownerAddress, spender, result.nonce, result.expiry, true, result.v, result.r, result.s);
             }}>
               PERMIT
