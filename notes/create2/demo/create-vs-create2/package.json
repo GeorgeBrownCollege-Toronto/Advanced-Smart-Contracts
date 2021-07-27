@@ -1,0 +1,16 @@
+{
+  "name": "create2",
+  "description": "create vs create2",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "test": "truffle test"
+  },
+  "dependencies": {
+    "debug": "^4.3.2",
+    "expect": "^27.0.6",
+    "truffle": "^5.4.2"
+  }
+}
