@@ -1,0 +1,19 @@
+{
+  "name": "metamorphosis-create2",
+  "version": "1.0.0",
+  "description": "over writing smart contract",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "test": "truffle test"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.3.4"
+  },
+  "devDependencies": {
+    "truffle": "^5.4.2"
+  }
+}
