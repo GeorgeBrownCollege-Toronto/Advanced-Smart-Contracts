@@ -22,7 +22,7 @@ contract('Factory', ([account]) => {
 
     it('should deploy contract', async () => {
       const estimatedGas = await Example.new.estimateGas();
-      const example = await await Example.new();
+      const example = await Example.new();
 
       expect(await example.getOwner()).toBe(account);
 
