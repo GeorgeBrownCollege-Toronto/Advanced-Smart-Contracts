@@ -1,7 +1,0 @@
-<section data-markdown><textarea data-template>
-    ### Metamorphic Smart Contracts
-    * A <a href="https://github.com/0age/metamorphic" target="_blank">factory contract</a> for creating redeployable contracts.
-    * Redeploying to the same contract address is permitted after calling `selfdestruct()` on previous logic contract
-    * It is called <a href="https://medium.com/@jason.carver/defend-against-wild-magic-in-the-next-ethereum-upgrade-b008247839d2" target="_blank">wild magic</a> in Ethereum
-    * Contracts redeployed to same address with different logic using <a href="https://eips.ethereum.org/EIPS/eip-1014" target="_blank">EIP-1014 CREATE2</a>
-    </textarea></section>
