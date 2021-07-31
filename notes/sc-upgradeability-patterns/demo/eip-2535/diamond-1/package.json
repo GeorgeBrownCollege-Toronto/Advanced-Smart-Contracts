@@ -13,7 +13,7 @@
     "printWidth": 150
   },
   "dependencies": {
-    "truffle": "^5.1.58"
+    "truffle": "^5.4.3"
   },
   "devDependencies": {
     "@codechecks/client": "^0.1.10",
