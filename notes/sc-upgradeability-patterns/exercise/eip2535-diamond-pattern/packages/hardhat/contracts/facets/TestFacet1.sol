@@ -84,8 +84,9 @@ interface IERC20 {
 }
 
 contract Helper {
-    function getLendingPool() public pure returns (address lendingpool) {
-        lendingpool = 0x9E5C7835E4b13368fd628196C4f1c6cEc89673Fa;
+    function getLendingPool(address) public pure returns (address lendingpool) {
+        // lendingpool = 0x9E5C7835E4b13368fd628196C4f1c6cEc89673Fa;
+        return address(0);
     }
     
     function getDAI() public pure returns (address dai) {
@@ -95,12 +96,12 @@ contract Helper {
 
 contract TestFacet1 is Helper {
  function borrowAave(address _depositeReserve, uint256 _depositeAmount, address _borrowReserve, uint256 _borrowAmount, uint256 _interestRateMode, uint16 _referralCode) public payable {
-     AaveInterface(getLendingPool()).deposit{value: msg.value}(_depositeReserve, _depositeAmount, _referralCode);
-     AaveInterface(getLendingPool()).borrow(_borrowReserve, _borrowAmount, _interestRateMode, _referralCode);
+     AaveInterface(getLendingPool(_depositeReserve)).deposit{value: msg.value}(_depositeReserve, _depositeAmount, _referralCode);
+     AaveInterface(getLendingPool(_depositeReserve)).borrow(_borrowReserve, _borrowAmount, _interestRateMode, _referralCode);
  }
  
  function flashLoan(address _receiver, address _reserve, uint256 _amount, bytes memory _params) public {
      IERC20(getDAI()).transfer(_receiver, _amount);
-     AaveInterface(getLendingPool()).flashLoan(_receiver, _reserve, _amount, _params);
+     AaveInterface(getLendingPool(_receiver)).flashLoan(_receiver, _reserve, _amount, _params);
  }
 }
