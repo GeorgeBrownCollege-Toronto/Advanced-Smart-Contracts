@@ -35,7 +35,7 @@ web3.eth
     const rawTx = {
       from: accountObj.address,
       gas,
-      data: contractData,
+      data: contractData
     };
     web3.eth.accounts
       .signTransaction(rawTx, accountObj.privateKey)
@@ -75,3 +75,4 @@ function waitForReceipt(hash, cb) {
 // deployed another on 0x04994738ae2F099c02BB01Bd909f4be80c75F1a8 on rinkeby
 // deployed another on 0x35D01bb5DF788259806a7B29C4f31Aa3B1Ab037d on rinkeby
 // deployed another on 0xD8E902F55462553302E601AAd6A0c3AcFb842da1 on rinkeby
+// The contract is deployed at  0x484b549668451BD5168570F0293F08CAA53E9656
