@@ -8,7 +8,7 @@ const Web3 = require("web3");
 const abi = require("./abi.json");
 
 // const CONTRACT_ADDRESS="0x484b549668451BD5168570F0293F08CAA53E9656"
-const CONTRACT_ADDRESS="0xa29EC2151FD948e90DC162D56f762F4cFd4A8587"
+const CONTRACT_ADDRESS="0x484b549668451BD5168570F0293F08CAA53E9656"
 
 // create web3 instance
 const web3 = new Web3(
