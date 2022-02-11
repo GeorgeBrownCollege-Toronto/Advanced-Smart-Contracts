@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/GeorgeBrownCollege-Toronto/Advanced-Smart-Contracts/notes/sc-dev-tools/demo/drizzle-tokensale#readme",
   "dependencies": {
-    "@openzeppelin/contracts": "^2.4.0"
+    "@openzeppelin/contracts": "^4.4.2"
   },
   "devDependencies": {
     "dotenv": "^8.2.0"
