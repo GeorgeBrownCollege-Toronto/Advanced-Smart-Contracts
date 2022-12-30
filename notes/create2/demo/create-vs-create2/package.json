@@ -11,6 +11,6 @@
   "dependencies": {
     "debug": "^4.3.2",
     "expect": "^27.0.6",
-    "truffle": "^5.4.2"
+    "truffle": "^5.7.1"
   }
 }
